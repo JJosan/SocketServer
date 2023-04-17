@@ -1,7 +1,6 @@
 import java.io.*;
 import java.net.*;
 
-// java TCPClient host port
 public class TCPClient {
   public static void main(String... args) {
     String host = "localhost";
@@ -13,6 +12,7 @@ public class TCPClient {
       while ((readChar = in.read()) != -1) {
         System.out.write(readChar);
       }
+      sock.close();
     }
     catch (IOException ex) {
       ex.printStackTrace();
